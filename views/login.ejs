@@ -1,0 +1,72 @@
+<style>
+  h1{
+    text-align: center;
+  }
+  /* Estilos para el contenedor del formulario */
+  .form-container {
+    width: 300px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  /* Estilos para los campos del formulario */
+  .form-container label {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .form-container input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  /* Estilos para el botón de envío */
+  .form-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  /* Estilos para el enlace de registro */
+  .register-link {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #007bff;
+  }
+</style>
+
+<h1 >Login</h1>
+<% if (messages.error) { %>
+  <%= messages.error %>
+<% } %>
+
+<div class="form-container">
+  <form action="/login" method="post">
+    <div>
+      <label>Username:</label>
+      <input type="text" name="username" required>
+    </div>
+    <div>
+      <label>Password:</label>
+      <input type="password" name="password" required>
+    </div>
+    <div>
+      <button type="submit">Login</button>
+    </div>
+  </form>
+  <a class="register-link" href="/register">Register</a>
+  
+</div>
+
